@@ -3,16 +3,16 @@ const axios = require('axios');
 
 try {
     const URL = 'https://slack.com/api/chat.postMessage';
-    const message = 'FOOBAR';
+
 
     axios.post(URL, {
-        "text": message,
-        "channel": "C01R1KE835Y",
+        "text": core.getInput('message'),
+        "channel": core.getInput('channel_id'),
     },
         {
            "headers": {
                 "Content-Type": "application/json; charset=utf-8",
-                "Authorization": "Bearer " + core.getInput('SLACK_BOT_TOKEN')
+                "Authorization": "Bearer " + core.getInput('bot_token')
             }
         }
     )
