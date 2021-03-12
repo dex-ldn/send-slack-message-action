@@ -1,0 +1,9 @@
+name: 'Send Slack Message'
+description: 'Send a message to a slack channel'
+inputs:
+  SLACK_BOT_TOKEN:  # id of input
+    description: 'Slack bot token'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
