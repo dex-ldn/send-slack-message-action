@@ -6,13 +6,13 @@ try {
     const message = 'FOOBAR';
 
     axios.post(URL, {
-        message,
-        channel: "C01R1KE835Y",
+        "message": message,
+        "channel": "C01R1KE835Y",
     },
         {
-           headers: {
-                "Content-Type": 'application/json',
-                Authorization: 'Bearer ' + core.getInput('SLACK_BOT_TOKEN')
+           "headers": {
+                "Content-Type": "application/json; charset=utf-8",
+                "Authorization": "Bearer " + core.getInput('SLACK_BOT_TOKEN')
             }
         }
     )
